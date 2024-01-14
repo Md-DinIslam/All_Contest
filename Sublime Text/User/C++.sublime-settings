@@ -1,0 +1,5 @@
+// These settings override both User and Default settings for the C++ syntax
+{
+	"tab_completion": false,
+    "auto_complete_commit_on_tab": false
+}

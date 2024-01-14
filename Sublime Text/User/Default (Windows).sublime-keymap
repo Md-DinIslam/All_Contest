@@ -1,0 +1,77 @@
+[
+  { "keys": ["alt+z"], "command": "toggle_setting", "args": {"setting": "word_wrap"}},
+	{ "keys": ["alt+up"], "command": "swap_line_up" },
+	{ "keys": ["alt+down"], "command": "swap_line_down" },
+  { "keys": ["tab"], "command": "move", "args": {"by": "characters", "forward": true}, "context":
+    [
+      { "key": "following_text", "operator": "regex_contains", "operand": "^[)}'\"\\]]", "match_all": true },
+      { "key": "auto_complete_visible", "operator": "equal", "operand": false }
+    ]
+  },
+  { "keys": ["tab"], "command": "hide_auto_complete", "context":
+    [
+      { "key": "auto_complete_visible", "operator": "equal", "operand": true }
+    ]
+  },
+    { "keys": ["ctrl+alt+f"], "command": "show_panel", "args": {"panel": "find_in_files"} },
+  { "keys": ["ctrl+d"], "command": "duplicate_line" },
+  { "keys": ["ctrl+u"], "command": "find_under_expand" },
+  { "keys": ["alt+backspace"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
+  { "keys": ["ctrl+\\"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Add Line Before.sublime-macro"} },
+  { "keys": ["ctrl+r"], "command": "build" },
+  { "keys": ["ctrl+t"], "command": "side_bar_new_file2" },
+  { "keys": ["f2"], "command": "side_bar_rename" },
+  // { "keys": ["ctrl+alt+f"], "command": "side_bar_find_files_path_containing" },
+  { "keys": ["f12"], "command": "reindent" },
+  { "keys": ["super+k", "super+t"], "command": "title_case" },
+  { "keys": ["super+v"], "command": "paste_and_indent" },
+  { "keys": ["super+shift+v"], "command": "paste" },
+  
+  // { "keys": ["tab"], "command": "insert", "args": {"characters": "\t"} },
+  // { "keys": ["tab"], "command": "auto_complete", "args": {"mini": true, "default": "\t",  "commit_single": true},
+  //   "context":
+  //   [
+  //     { "key": "auto_complete_visible", "operand": false },
+  //     { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
+  //     { "key": "setting.tab_completion", "operator": "equal", "operand": true },
+  //     { "key": "preceding_text", "operator": "regex_match", "operand": ".*\\w", "match_all": true },
+  //   ]
+  // },
+
+  // { "keys": ["tab"], "command": "auto_complete", "args": {"snippets_only": true, "default": "\t", "commit_single": true},
+  //   "context":
+  //   [
+  //     { "key": "auto_complete_visible", "operand": false },
+  //     { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
+  //     { "key": "setting.tab_completion", "operator": "equal", "operand": false },
+  //     { "key": "preceding_text", "operator": "regex_match", "operand": ".*\\w", "match_all": true },
+  //   ]
+  // },
+  
+  // { "keys": ["tab"], "command": "expand_snippet", "context":
+  //   [{ "key": "has_snippet" }, ]
+  // },
+  // { "keys": ["tab"], "command": "reindent", "context":
+  //   [
+  //     { "key": "setting.auto_indent", "operator": "equal", "operand": true },
+  //     { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
+  //     { "key": "preceding_text", "operator": "regex_match", "operand": "^$", "match_all": true },
+  //     { "key": "following_text", "operator": "regex_match", "operand": "^$", "match_all": true }
+  //   ]
+  // },
+  // { "keys": ["tab"], "command": "indent", "context":
+  //   [{ "key": "text", "operator": "regex_contains", "operand": "\n" }]
+  // },
+  // { "keys": ["tab"], "command": "move", "args": {"by": "lines", "forward": true}, "context":
+  //   [
+  //     { "key": "overlay_has_focus", "operator": "equal", "operand": true }
+  //   ]
+  // },
+  // { "keys": ["tab"], "command": "next_field", "context":
+  //   [{ "key": "has_next_field", "operator": "equal", "operand": true }]
+  // },
+  // { "keys": ["tab"], "command": "commit_completion", "context":
+  //   [{ "key": "auto_complete_visible" }]
+  // },
+  
+]

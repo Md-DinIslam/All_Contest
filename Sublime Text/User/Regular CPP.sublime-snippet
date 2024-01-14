@@ -1,0 +1,36 @@
+<snippet>
+	<content><![CDATA[
+/* GREEN UNIVERSITY OF BANGLADESH
+       Md DinIslam, Batch-221 (CSE)
+*/
+#include <bits/stdc++.h>
+// #include <ext/pb_ds/assoc_container.hpp>
+// #include <ext/pb_ds/tree_policy.hpp>
+using namespace std;
+// using namespace __gnu_pbds;
+#ifdef LOCAL
+#include "debug.h"
+#else
+#define debug(...)
+#endif
+#define ll long long
+void solve() {
+    $1
+}
+int main() {
+    ios_base::sync_with_stdio(0);
+    cin.tie(0), cout.tie(0);
+    int t = 1;
+    // cin >> t;
+    while (t--) solve();
+    // for (int i = 1; i <= t; ++i) { //Kickstart
+    //     cout << "Case #" << i << ": "; solve();
+    // }
+    return 0;
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>regular cpp</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>
