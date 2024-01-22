@@ -1,42 +1,35 @@
 /* GREEN UNIVERSITY OF BANGLADESH
-       Md DinIslam, Batch-221
+       Md DinIslam, Batch-221 (CSE)
 */
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long
+const int mxV = 1e9;
 void solve() {
-    
-    // 3, 2+1
-    
-    // 3,, 2 0 0 1 1
-    
-    //  3 - 3 = 0;
-    
-    // x = 8, (Sum - x)
-    
     int n;
     cin >> n;
-    unordered_map<ll, ll> cnt;
-    ll evSum = 0, oddSum = 0;
-    string ans = "NO";
-    cnt[0]++;
-    for (int i = 1; i <= n; ++i) {
-        ll x;
-        cin >> x;
-        if (i & 1) oddSum += x;
-        else evSum += x;
-        ll df = oddSum - evSum;
-        if (df == 0 || cnt.find(df) != cnt.end()) {
-            ans = "YES";
-        }
-        cnt[df]++;
+    ll v[n];
+    for (int i = 0; i < n; ++i) {
+        cin >> v[i];
+        if (i & 1) v[i] *= -1;
     }
-    cout << ans << '\n';
+    ll ok = 0, sum = 0;
+    map<ll, int> cnt;
+    cnt[0]++;
+    for (int i = 0; i < n; ++i) {
+        sum += v[i];
+        if (cnt.find(sum) != cnt.end()) {
+            ok = 1;
+            break;
+        }
+        cnt[sum]++;
+    }
+    cout << (ok ? "YES\n" : "NO\n");
 }
 int main()
 {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
+    ios_base::sync_with_stdio(0);
+    cin.tie(0), cout.tie(0);
 #ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
